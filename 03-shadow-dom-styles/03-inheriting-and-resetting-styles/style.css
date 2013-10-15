@@ -1,0 +1,19 @@
+/* Hint: You shouldn't have to touch any CSS :) */
+
+.lumpy-space-princess {
+  background: #333;
+  -webkit-animation: spin 4s infinite alternate;
+}
+
+@keyframes "spin" {
+  100% {
+    -webkit-transform: rotate(2000deg);
+  }
+}
+
+h1 {
+  position: absolute;
+  right: 25%;
+  top: 0;
+  font-family: 'Underdog';
+}

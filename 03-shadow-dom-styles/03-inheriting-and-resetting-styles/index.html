@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lumpy Space Princess</title>
+    <link href='http://fonts.googleapis.com/css?family=Underdog' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <template>
+      <img class="lumpy-space-princess"
+           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/lsp.gif"/>
+    </template>
+
+    <div class="widget"></div>
+
+    <!-- Lumpy Space Princess says... -->
+    <h1>
+      Like, all I wanna do is spin around!<br/>
+      C'mon you guys! Why is that so <em>difficult?!</em>
+    </h1>
+
+    <script>
+      // The CSS to make Lumpy Space Princess spin is already present.
+      // Can you figure out how to make it effect the Shadow DOM?
+      
+      var tmpl = document.querySelector('template');
+      var host = document.querySelector('.widget');
+      var root = host.createShadowRoot();
+      root.appendChild(tmpl.content.cloneNode(true));
+    </script>
+  </body>
+</html>

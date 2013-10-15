@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Template Ordering</title>
+  </head>
+  <body>
+    <template id="for-you">
+      <h1>for you!</h1>
+    </template>
+
+    <template id="no-burritos">
+      <h1>No burritos</h1>
+    </template>
+
+    <div id="host"></div>
+
+    <script>
+      var noBurritos = document.querySelector('#no-burritos');
+      var forYou = document.querySelector('#for-you');
+      var host = document.querySelector('#host');
+
+      host.appendChild(noBurritos.content.cloneNode(true));
+      host.appendChild(forYou.content.cloneNode(true));
+    </script>
+  </body>
+</html>

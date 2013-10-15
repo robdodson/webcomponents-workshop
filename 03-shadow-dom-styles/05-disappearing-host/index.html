@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing :host</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <template>
+      <img width="300" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/ghost_1.gif"/>
+    </template>
+
+    <span class="ghost"></span>
+
+    <script>
+      var tmpl = document.querySelector('template');
+      var host = document.querySelector('.ghost');
+      var root = host.createShadowRoot();
+      root.appendChild(tmpl.content.cloneNode(true));
+    </script>
+
+
+    <!-- Ignore everything beneath this line... -->
+
+    <h1>Using only :host selectors. Make the ghost disappear and reappear on hover.</h1>
+  </body>
+</html>

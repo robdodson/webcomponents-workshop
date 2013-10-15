@@ -1,0 +1,15 @@
+h1 {
+  -webkit-filter: blur(2px);
+}
+
+p {
+  position: absolute;
+  right: 300px;
+  top: 100px;
+}
+
+img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Poisonous Parts</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <template>
+      <style>
+        .fruit {
+          width: 20px;
+          height: 20px;
+          background: black;
+          float: left;
+          margin-left: 10px;
+        }
+      </style>
+      <div class="fruit"></div>
+      <div class="fruit"></div>
+      <div class="fruit"></div>
+    </template>
+
+    <div class="fruits"></div>
+
+    <script>
+      var tmpl = document.querySelector('template');
+      var host = document.querySelector('.fruits');
+      var root = host.createShadowRoot();
+      root.appendChild(tmpl.content.cloneNode(true));
+    </script>
+
+
+
+
+
+    <!-- Ignore everything below this line... -->
+
+    <div class="yoshi">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/yoshi.gif"/>
+    </div>
+
+    <img class="fruit-tree" width="300px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/tree.png"/>
+
+    <h2>Yoshi is totally excited to eat the fruit off that tree. Unfortunately one of the fruits is straight up poison!<br><br>Use part attributes and styles to indicate which fruits are good and which ones are bad. Try changing the background color!</h2>
+  </body>
+</html>
