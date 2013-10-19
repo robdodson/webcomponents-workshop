@@ -1,0 +1,23 @@
+<template>
+  <h1>Hello world!</h1>
+</template>
+
+<script>
+  // Pay attention here. To refer to the import itself we
+  // use document.currentScript.ownerDocument.
+  // So document.currentScript.ownerDocument is the *importee*
+  // And document is the *importer*
+  var owner = document.currentScript.ownerDocument;
+  var tmpl = owner.querySelector('template');
+
+  var WidgetProto = Object.create(HTMLElement.prototype);
+
+  WidgetProto.createdCallback = function() {
+    var root = this.createShadowRoot();
+    root.appendChild(tmpl.content.cloneNode(true));
+  };
+
+  var Widget = document.register('my-widget', {
+    prototype: WidgetProto
+  });
+</script>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic HTML Imports</title>
+    <link rel="import" href="./imports/blog-post.html">
+  </head>
+  <body>
+    <script>
+      var link = document.querySelector('link[href$="blog-post.html"]');
+      var post = link.import.querySelector('#blog-post');
+      document.body.appendChild(post.cloneNode(true));
+    </script>
+  </body>
+</html>

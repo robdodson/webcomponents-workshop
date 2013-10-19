@@ -5,6 +5,13 @@
     <title>Templates Demo</title>
   </head>
   <body>
-    <!-- We'll fill this in during class -->
+    <template>
+      <h1>Hello world!</h1>
+    </template>
+
+    <script>
+      var tmpl = document.querySelector('template');
+      document.body.appendChild(tmpl.content.cloneNode(true));
+    </script>
   </body>
 </html>
