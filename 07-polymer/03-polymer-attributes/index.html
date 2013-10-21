@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Polymer Demo</title>
+    <script src="../lib/polymer.min.js"></script>
+  </head>
+  <body>
+
+    <!--
+      What else can you do with the age attribute?
+      Could you display it or use it in CSS somehow?
+    -->
+
+    <polymer-element name="age-meter" attributes="age">
+      <template>
+        <input type="range" value="{{age}}" />
+      </template>
+      <script>
+        Polymer("age-meter", {
+          age: 29
+        });
+      </script>
+    </polymer-element>
+
+    <age-meter></age-meter>
+  </body>
+</html>
